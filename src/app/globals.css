@@ -7,7 +7,7 @@
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: "Geist", "Geist Fallback", ui-sans-serif, system-ui, sans-serif;
+  --font-sans: var(--font-nunito), "Nunito", ui-sans-serif, system-ui, sans-serif;
   --font-mono: "Geist Mono", "Geist Mono Fallback", ui-monospace, monospace;
   --font-heading: var(--font-sans);
   --color-sidebar-ring: var(--sidebar-ring);
@@ -46,27 +46,55 @@
   --radius-2xl: calc(var(--radius) * 1.8);
   --radius-3xl: calc(var(--radius) * 2.2);
   --radius-4xl: calc(var(--radius) * 2.6);
+
+  /* VINHOME CP brand tokens */
+  --color-navy: var(--navy);
+  --color-ink: var(--ink);
+  --color-subtle: var(--subtle);
+  --color-canvas: var(--canvas);
+  --color-canvas-2: var(--canvas-2);
+  --color-surface: var(--surface);
+  --color-line: var(--line);
+  --color-hairline: var(--hairline);
+  --color-blue-soft: var(--blue-soft);
+  --color-primary-pressed: var(--primary-pressed);
+  --color-success: var(--success);
+  --color-success-soft: var(--success-soft);
+  --color-success-dot: var(--success-dot);
+  --color-danger: var(--danger);
+  --color-danger-soft: var(--danger-soft);
+  --color-warning: var(--warning);
+  --color-warning-soft: var(--warning-soft);
+  --color-tip: var(--tip);
+  --color-tip-line: var(--tip-line);
+  --color-tip-ink: var(--tip-ink);
+  --color-purple: var(--purple);
+  --color-purple-soft: var(--purple-soft);
+  --color-track: var(--track);
+  --radius-card: var(--radius-card-val);
+  --radius-btn: var(--radius-btn-val);
+  --radius-tile: var(--radius-tile-val);
 }
 
 :root {
-  --background: oklch(1 0 0);
-  --foreground: oklch(0.145 0 0);
-  --card: oklch(1 0 0);
-  --card-foreground: oklch(0.145 0 0);
-  --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.145 0 0);
-  --primary: oklch(0.205 0 0);
-  --primary-foreground: oklch(0.985 0 0);
-  --secondary: oklch(0.97 0 0);
-  --secondary-foreground: oklch(0.205 0 0);
-  --muted: oklch(0.97 0 0);
-  --muted-foreground: oklch(0.556 0 0);
-  --accent: oklch(0.97 0 0);
-  --accent-foreground: oklch(0.205 0 0);
-  --destructive: oklch(0.577 0.245 27.325);
-  --border: oklch(0.922 0 0);
-  --input: oklch(0.922 0 0);
-  --ring: oklch(0.708 0 0);
+  --background: #f3f6fc;
+  --foreground: #122650;
+  --card: #ffffff;
+  --card-foreground: #122650;
+  --popover: #ffffff;
+  --popover-foreground: #122650;
+  --primary: #1457d6;
+  --primary-foreground: #ffffff;
+  --secondary: #e8eefc;
+  --secondary-foreground: #0e2a5c;
+  --muted: #5b6b86;
+  --muted-foreground: #5b6b86;
+  --accent: #e8eefc;
+  --accent-foreground: #0e2a5c;
+  --destructive: #dc4b45;
+  --border: #dce4f3;
+  --input: #dce4f3;
+  --ring: #1457d6;
   --chart-1: oklch(0.87 0 0);
   --chart-2: oklch(0.556 0 0);
   --chart-3: oklch(0.439 0 0);
@@ -81,40 +109,34 @@
   --sidebar-accent-foreground: oklch(0.205 0 0);
   --sidebar-border: oklch(0.922 0 0);
   --sidebar-ring: oklch(0.708 0 0);
-}
 
-.dark {
-  --background: oklch(0.145 0 0);
-  --foreground: oklch(0.985 0 0);
-  --card: oklch(0.205 0 0);
-  --card-foreground: oklch(0.985 0 0);
-  --popover: oklch(0.205 0 0);
-  --popover-foreground: oklch(0.985 0 0);
-  --primary: oklch(0.922 0 0);
-  --primary-foreground: oklch(0.205 0 0);
-  --secondary: oklch(0.269 0 0);
-  --secondary-foreground: oklch(0.985 0 0);
-  --muted: oklch(0.269 0 0);
-  --muted-foreground: oklch(0.708 0 0);
-  --accent: oklch(0.269 0 0);
-  --accent-foreground: oklch(0.985 0 0);
-  --destructive: oklch(0.704 0.191 22.216);
-  --border: oklch(1 0 0 / 10%);
-  --input: oklch(1 0 0 / 15%);
-  --ring: oklch(0.556 0 0);
-  --chart-1: oklch(0.87 0 0);
-  --chart-2: oklch(0.556 0 0);
-  --chart-3: oklch(0.439 0 0);
-  --chart-4: oklch(0.371 0 0);
-  --chart-5: oklch(0.269 0 0);
-  --sidebar: oklch(0.205 0 0);
-  --sidebar-foreground: oklch(0.985 0 0);
-  --sidebar-primary: oklch(0.488 0.243 264.376);
-  --sidebar-primary-foreground: oklch(0.985 0 0);
-  --sidebar-accent: oklch(0.269 0 0);
-  --sidebar-accent-foreground: oklch(0.985 0 0);
-  --sidebar-border: oklch(1 0 0 / 10%);
-  --sidebar-ring: oklch(0.556 0 0);
+  /* VINHOME CP brand tokens (blue + white, gold accent) */
+  --navy: #0e2a5c;
+  --ink: #122650;
+  --subtle: #8c9ab5;
+  --canvas: #f3f6fc;
+  --canvas-2: #f6f9fe;
+  --surface: #ffffff;
+  --line: #dce4f3;
+  --hairline: #f1f4fa;
+  --blue-soft: #e8eefc;
+  --primary-pressed: #103f9e;
+  --success: #1da35c;
+  --success-soft: #e8f8ee;
+  --success-dot: #4ade80;
+  --danger: #dc4b45;
+  --danger-soft: #fdeceb;
+  --warning: #c9972e;
+  --warning-soft: #faf1dd;
+  --tip: #fdf6e8;
+  --tip-line: #ecd9a8;
+  --tip-ink: #7a5c1e;
+  --purple: #7c4de0;
+  --purple-soft: #f3ecfe;
+  --track: #d7e1f2;
+  --radius-card-val: 18px;
+  --radius-btn-val: 16px;
+  --radius-tile-val: 12px;
 }
 
 @layer base {
@@ -126,5 +148,134 @@
   }
   html {
     @apply font-sans;
+  }
+}
+
+@layer components {
+  .label-caps {
+    font-size: 11px;
+    font-weight: 900;
+    letter-spacing: 0.05em;
+    color: var(--color-subtle);
+    text-transform: uppercase;
+  }
+
+  .card {
+    border-radius: var(--radius-card);
+    background-color: var(--color-surface);
+    box-shadow: 0 4px 14px rgb(14 42 92 / 0.06);
+  }
+
+  .shadow-card {
+    box-shadow: 0 4px 14px rgb(14 42 92 / 0.06);
+  }
+
+  .shadow-card-hover {
+    box-shadow: 0 6px 18px rgb(14 42 92 / 0.14);
+  }
+
+  .shadow-cta {
+    box-shadow: 0 6px 16px rgb(20 87 214 / 0.35);
+  }
+
+  .btn,
+  .btn-primary,
+  .btn-outline,
+  .btn-ghost {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    font-weight: 900;
+    white-space: nowrap;
+    transition: background-color 0.15s ease, transform 0.15s ease, color 0.15s ease;
+  }
+
+  .btn-primary {
+    background-color: var(--color-primary);
+    color: #fff;
+    box-shadow: 0 6px 16px rgb(20 87 214 / 0.35);
+  }
+  .btn-primary:hover {
+    background-color: var(--color-primary-pressed);
+  }
+
+  .btn-outline {
+    border: 2px solid var(--color-line);
+    background-color: var(--color-surface);
+    color: var(--color-navy);
+  }
+  .btn-outline:hover {
+    background-color: var(--color-blue-soft);
+  }
+
+  .btn-ghost {
+    color: var(--color-navy);
+    background-color: transparent;
+  }
+  .btn-ghost:hover {
+    background-color: var(--color-blue-soft);
+  }
+
+  .field {
+    width: 100%;
+    border-radius: var(--radius-tile);
+    border: 2px solid var(--color-line);
+    background-color: var(--color-surface);
+    padding: 0.625rem 0.875rem;
+    font-weight: 800;
+    color: var(--color-navy);
+  }
+  .field:focus {
+    outline: none;
+    border-color: var(--color-primary);
+  }
+}
+
+@layer utilities {
+  .landing-blob {
+    filter: blur(70px);
+    opacity: 0.75;
+  }
+
+  .landing-float {
+    animation: landing-float 5.5s ease-in-out infinite;
+  }
+
+  .landing-marquee {
+    animation: landing-marquee 42s linear infinite;
+  }
+
+  .animate-pulse-dot {
+    animation: pulse-dot 1.6s infinite;
+  }
+
+  @keyframes landing-marquee {
+    0% {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-50%);
+    }
+  }
+
+  @keyframes landing-float {
+    0%,
+    to {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-8px);
+    }
+  }
+
+  @keyframes pulse-dot {
+    0%,
+    to {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0.45;
+    }
   }
 }
